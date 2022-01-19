@@ -12,12 +12,16 @@
 ```
 ---
 ## Documentation
-Please write a docstring for all functions, especially those code which are not self-explaining<br/>
-docstring formats as follow:
-* [Google](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)
-* [PEP 257](https://www.python.org/dev/peps/pep-0257/#specification)
-* [Numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard)
-* [reST](https://pythonhosted.org/an_example_pypi_project/sphinx.html#function-definitions)
+Please write [documentation comments](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/documentation-comments)
+sample as follow:
+```cs
+/// <value>Property <c>X</c> represents the point's x-coordinate.</value>
+public int X
+{
+   get { return x; }
+   set { x = value; }
+}
+```
 
 Also, please add [Debug.log](https://docs.unity3d.com/ScriptReference/Debug.Log.html) for unity codes, it helps for checking codes are functioning well or not
 
@@ -34,3 +38,23 @@ and make sure all your commit message should be in [semantic format](https://gis
 >|
 >+-------> Type: chore, docs, feat, fix, refactor, style, or test.
 >```
+
+---
+## File Structure
+currently all stuffs should goes into `unity` folder, as all stuffs are done in unity
+* unity
+  * Assets
+    * Animation
+    * Backgrounds
+    * Fonts (all `TMP` presets)
+    * Icons
+    * Motion (source file of `Animation`)
+    * Scenes
+    * scripts
+    * TextMesh Pro (package import)
+  * Library (system generate)
+  * Logs (system generate)
+  * Packages (system generate)
+  * ProjectSettings (don't edit directly, make changes in unity)
+  * Temp (system generate)
+  * UserSettings (don't edit directly, make changes in unity)
